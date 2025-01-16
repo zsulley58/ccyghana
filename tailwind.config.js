@@ -5,7 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      'display': ["'Big Shoulders Display'", 'sans-serif'], // Adding the Big Shoulders Display font
+    },
   },
   plugins: [],
 }
