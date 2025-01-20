@@ -1,28 +1,64 @@
 import React from 'react';
+import { assets } from '../assets/assets'; // Make sure to import assets here
 
 const Comp = () => {
   return (
     <div className="bg-[#8d0f1a] py-10">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-8">
-        {/* Mission Box */}
-        <div className="w-full lg:w-1/2 relative">
-          <h3 className="text-2xl font-extrabold text-white mb-2 pl-5 text-center">OUR MISSION</h3> {/* Header outside the box */}
-          <div className="bg-[#00335b] rounded-xl absolute right-0 bottom-0 w-full h-[19rem] translate-x-2 translate-y-2 z-0"></div> {/* Background box */}
-          <div className="bg-white rounded-xl p-[7rem] relative z-10">
-            <p className="text-center text-gray-700">
-              Our mission is to deliver quality services and empower communities to achieve their goals through innovative solutions.
-            </p>
-          </div>
-        </div>
+      <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
+        {/* Our Accomplishments Header */}
+        <h2 className="text-3xl font-extrabold text-white mb-4 text-center">OUR ACCOMPLISHMENTS</h2>
+        <p className="text-white text-lg text-center mb-10">
+          We have achieved significant milestones that showcase our growth, impact, and commitment to excellence.
+        </p>
 
-        {/* Vision Box */}
-        <div className="w-full lg:w-1/2 relative">
-          <h3 className="text-2xl font-extrabold text-white mb-2 pl-5 text-center">OUR VISION</h3> {/* Header outside the box */}
-          <div className="bg-[#00335b] rounded-xl absolute right-0 bottom-0 w-full h-[19rem] translate-x-2 translate-y-2 z-0"></div> {/* Background box */}
-          <div className="bg-white rounded-xl p-[7rem] relative z-10">
-            <p className="text-center text-gray-700">
-              Our vision is to be a leading provider of technology solutions, shaping a future of sustainability and growth.
-            </p>
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* First Box */}
+          <div className="h-[35em] lg:w-[25em] flex flex-col items-center">
+            <div className="bg-white rounded-xl overflow-hidden flex-1">
+              <img
+                src={assets.completedProject1} // Now using the imported asset
+                alt="236 Achievements"
+                className="w-full h-[50%] object-cover"
+              />
+              <p className="text-lg">Achievement so Far</p>
+            </div>
+            <div className="text-white text-center mt-4">
+              <h4 className="text-2xl font-bold">236</h4>
+              <p className="text-lg">Achievement so Far</p>
+            </div>
+          </div>
+
+          {/* Second Box */}
+          <div className="h-[35em] lg:w-[25em] flex flex-col items-center">
+            <div className="bg-white rounded-xl overflow-hidden flex-1">
+              <img
+                src={assets.completedProject1} // Now using the imported asset
+                alt="236 Achievements"
+                className="w-full h-[50%] object-cover"
+              />
+              <p className="text-lg">Achievement so Far</p>
+            </div>
+            <div className="text-white text-center mt-4">
+              <h4 className="text-2xl font-bold">173</h4>
+              <p className="text-lg">Members</p>
+            </div>
+          </div>
+
+          {/* Third Box */}
+          <div className="h-[35em] lg:w-[25em] flex flex-col items-center">
+            <div className="bg-white rounded-xl overflow-hidden flex-1">
+              <img
+                src={assets.completedProject1} // Now using the imported asset
+                alt="236 Achievements"
+                className="w-full h-[50%] object-cover"
+              />
+              <p className="text-lg">Achievement so Far</p>
+            </div>
+          
+            <div className="text-white text-center mt-4">
+              <h4 className="text-2xl font-bold">69</h4>
+              <p className="text-lg">Om-going projects</p>
+            </div>
           </div>
         </div>
       </div>

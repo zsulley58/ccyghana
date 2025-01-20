@@ -4,29 +4,31 @@ import { FaArrowRight } from "react-icons/fa"; // Ensure you have installed reac
 
 const Register = () => {
   return (
-    <div className="bg-[#8d0f1a] py-20">
-      <div className="max-w-7xl mx-auto px-6 text-center">
-        {/* Header Section */}
-        <div className="flex justify-center items-center mb-10">
-          <img src={membership} alt="Membership Logo" className="w-8 h-8 mr-4" />
-          <h2 className="text-4xl font-extrabold text-white uppercase font-big-shoulders">MEMBERSHIP</h2>
-        </div>
+    <div className="bg-white py-20">
+      {/* New Section for Contact */}
+      <div 
+        className="bg-[#615f53] py-20 mt-10 h-[37rem] w-[90rem] rounded-xl mx-auto flex justify-center items-center" 
+        // Adjust roundness by changing "rounded-3xl" to "rounded-lg" (less rounded) or "rounded-full" (fully rounded)
+      >
+        <div className="w-3/4 max-w-md px-6 text-center text-white">
+          {/* Contact Header */}
+          <h2 className="text-2xl font-extrabold uppercase mb-10">
+            Please Contact Us If You Are Interested In Working For Us.
+          </h2>
+          <p>
+            Please Contact Us If You Are Interested In Working For Us.gkfjgkfdfdgfdgfgpdfgdfpgdfgogdgdpfdpdf
+          </p>
+          
 
-        {/* Content Text */}
-        <h2 className="text-3xl font-extrabold text-white mb-6 uppercase font-big-shoulders">
-          PLEASE REGISTER FOR FREE TODAY TO JOIN THE FASTEST
-          <br />
-          GROWING COMMUNITY ORGANIZATION IN GHANA.
-        </h2>
-        <h2 className="text-xl font-extrabold text-white mb-6 uppercase font-big-shoulders">YENDI AGENDA.</h2>
-        <h2 className="text-xl font-extrabold text-white mb-6 uppercase font-big-shoulders">YENDI FIRST...</h2>
-
-        {/* Register Button */}
-        <div className="mt-10 flex justify-center">
-          <button className="bg-yellow-500 text-black py-3 px-6 rounded-lg flex items-center justify-center space-x-2 hover:bg-yellow-400">
-            <span className="font-extrabold uppercase font-big-shoulders">REGISTER NOW</span>
-            <FaArrowRight />
-          </button>
+          {/* Contact Button */}
+          <div className="mt-10 flex justify-center">
+            <button 
+              className="bg-white text-black py-3 px-6 rounded-l hover:bg-gray-200"
+              // Adjust button roundness by changing "rounded-2xl" to "rounded-lg" or "rounded-full"
+            >
+              <span className="font-extrabold uppercase">Contact Us</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

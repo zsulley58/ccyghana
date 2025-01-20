@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import React from "react";
 import ongoing1 from "../assets/on-going-project1.jpg";
 import ongoing2 from "../assets/on-going-project2.jpg";
 import ongoing3 from "../assets/on-going-project3.jpg";
@@ -8,114 +7,49 @@ import completed2 from "../assets/completed-project2.jpg";
 import completed3 from "../assets/completed-project3.jpg";
 
 const Projects = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [completedIndex, setCompletedIndex] = useState(0);
-
-  // Arrays to hold the images
-  const ongoingProjects = [ongoing1, ongoing2, ongoing3];
-  const completedProjects = [completed1, completed2, completed3];
-
-  const handleNextOngoing = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === ongoingProjects.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const handlePrevOngoing = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? ongoingProjects.length - 1 : prevIndex - 1
-    );
-  };
-
-  const handleNextCompleted = () => {
-    setCompletedIndex((prevIndex) =>
-      prevIndex === completedProjects.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const handlePrevCompleted = () => {
-    setCompletedIndex((prevIndex) =>
-      prevIndex === 0 ? completedProjects.length - 1 : prevIndex - 1
-    );
-  };
+  // News Section Content
+  const newsItems = [
+    {
+      image: ongoing3,
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      image: completed1,
+      text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      image: completed2,
+      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    },
+    {
+      image: completed3,
+      text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+    },
+  ];
 
   return (
-    <div className="bg-[#00335b] py-20">
+    <div className="bg-[#00335b] py-12">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Ongoing Projects */}
-        <div className="mb-12">
-          <div className="flex justify-between items-center mb-6">
-            {/* Left Arrow */}
-            <button
-              className="text-white text-4xl px-2"
-              onClick={handlePrevOngoing}
-            >
-              <FaArrowLeft />
-            </button>
-
-            {/* Header Text in Between */}
-            <h2 className="text-4xl font-extrabold text-white mx-2 font-big-shoulders">
-              ONGOING PROJECTS
-            </h2>
-
-            {/* Right Arrow */}
-            <button
-              className="text-white text-4xl px-2"
-              onClick={handleNextOngoing}
-            >
-              <FaArrowRight />
-            </button>
-          </div>
-
-          {/* Image Slideshow */}
-          <div className="flex justify-center gap-4">
-            {ongoingProjects.map((project, index) => (
-              <img
-                key={index}
-                src={project}
-                alt={`Ongoing Project ${index + 1}`}
-                className="w-1/3 h-64 object-cover"
-              />
-            ))}
-          </div>
+        
+        {/* Header */}
+        <div className="mb-6">
+          <h2 className="text-4xl font-extrabold text-white mb-6 font-big-shoulders">
+            POPULAR NEWS
+          </h2>
         </div>
 
-        {/* Completed Projects */}
-        <div>
-          <div className="flex justify-between items-center mb-6">
-            {/* Left Arrow */}
-            <button
-              className="text-white text-4xl px-2"
-              onClick={handlePrevCompleted}
-            >
-              <FaArrowLeft />
-            </button>
-
-            {/* Header Text in Between */}
-            <h2 className="text-4xl font-extrabold text-white mx-2 font-big-shoulders">
-              COMPLETED PROJECTS
-            </h2>
-
-            {/* Right Arrow */}
-            <button
-              className="text-white text-4xl px-2"
-              onClick={handleNextCompleted}
-            >
-              <FaArrowRight />
-            </button>
-          </div>
-
-          {/* Image Slideshow */}
-          <div className="flex justify-center gap-4">
-            {completedProjects.map((project, index) => (
+        {/* News Items Section in One Line */}
+        <div className="flex justify-start gap-6 items-center">
+          {newsItems.map((item, index) => (
+            <div className="flex items-center" key={index}>
               <img
-                key={index}
-                src={project}
-                alt={`Completed Project ${index + 1}`}
-                className="w-1/3 h-64 object-cover"
+                src={item.image}
+                alt={`News ${index + 1}`}
+                className="w-14 h-14 rounded-full object-cover mr-4"
               />
-            ))}
-          </div>
+              <p className="text-white text-sm">{item.text}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

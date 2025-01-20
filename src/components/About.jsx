@@ -1,55 +1,95 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { assets } from '../assets/assets'; // Assuming you have the image in your assets folder
+import { assets } from '../assets/assets';
 
 const About = () => {
   return (
-    <div className="bg-[#615f53] py-10"> {/* Increased padding for better spacing */}
-      <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center">
-        {/* Image Section */}
-        <div className="lg:w-1/2 rounded-2xl overflow-hidden"> {/* Added overflow-hidden to clip the corners */}
-          <img 
-            src={assets['about_us_hero']} 
-            alt="About Us" 
-            className="w-[26rem] max-h-[28rem] object-cover border-4 border-white rounded-2xl" // Set max-height to limit image height
+    <div className="mx-auto px-6 pt-10 w-[100%]">
+      
+      {/* Main Container: Image, Content, and Mission, Vision, Narratives Sections */}
+      <div className="flex flex-col lg:flex-row items-center shadow-lg rounded-lg h-auto w-full">
+        
+        {/* Image Section (on the left) */}
+        <div className="lg:w-1/2 w-full h-full rounded-2xl overflow-hidden">
+          <img
+            src={assets['about_us_hero']}
+            alt="About Us"
+            className="w-full h-full object-cover border-4 border-white rounded-2xl"
           />
         </div>
 
-        {/* Content Section */}
-        <div className="lg:w-1/2 mt-8 lg:mt-0 text-white pl-10%"> {/* Added pl-5 for padding to left */}
-          {/* Header with custom font and extra bold weight */}
-          <h2 
-            className="text-white font-bold inline-block" // Inline-block keeps the underline only beneath the text
+        {/* Content Section (on the right) */}
+        <div className="lg:w-1/2 w-full mt-8 lg:mt-0 text-gray-800 pl-10">
+          
+          {/* About Us Section */}
+          <h2
+            className="text-black font-bold inline-block"
             style={{
               height: '6rem',
-              fontSize: '2rem', // Adjust font size for 50% height
-              fontFamily: 'Big Shoulders Display, ExtraBold', // Set font
+              fontSize: '2rem',
+              fontFamily: 'Big Shoulders Display, ExtraBold',
             }}
           >
             ABOUT US
-            <div className="border-b-8 border-white mt-1"></div> {/* Thicker underline */}
           </h2>
           <p className="text-lg mt-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet cursus urna. Vivamus id felis at urna egestas
-            commodo. Cras in nunc augue. Donec a nulla a nunc interdum aliquam. Aenean accumsan, nisi at faucibus tincidunt, 
-            velit nulla lacinia libero, ac elementum mi libero vel sapien.
+            commodo. Cras in nunc augue. Donec a nulla a nunc interdum aliquam.
           </p>
           <p className="text-lg mt-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet cursus urna. Vivamus id felis at urna egestas
-            commodo. Cras in nunc augue. Donec a nulla a nunc interdum aliquam. Aenean accumsan, nisi at faucibus tincidunt, 
-            velit nulla lacinia libero, ac elementum mi libero vel sapien.
+            Aenean accumsan, nisi at faucibus tincidunt, velit nulla lacinia libero, ac elementum mi libero vel sapien. Nullam nec
+            dui eu purus vehicula consequat.
           </p>
+          
+          {/* Our History Section */}
+          <h2
+            className="text-black font-bold inline-block mt-8"
+            style={{
+              height: '6rem',
+              fontSize: '2rem',
+              fontFamily: 'Big Shoulders Display, ExtraBold',
+            }}
+          >
+            OUR HISTORY
+          </h2>
+          <p className="text-lg mt-10">
+            Our history is rooted in a passion for road safety. We started with a small team and a big dream to improve the safety
+            of our citizens. Over the years, we've grown and made significant strides in raising awareness about road safety.
+          </p>
+          <p className="text-lg mt-4">
+            We have worked with various organizations and governments to create impactful programs. Our team continues to expand its
+            reach and influence, making strides towards a safer future for everyone.
+          </p>
+        </div>
+      </div>
 
-          {/* Learn More Button with Arrow */}
-          <div className="mt-6 flex items-center gap-2">
-            <Link to="/about" className="bg-yellow-400 text-gray-950 py-2 px-4 rounded-md font-semibold hover:bg-yellow-500 transition duration-300 flex items-center">
-              Learn More
-              {/* Right-pointing arrow */}
-              <span className="ml-2">
-                &rarr; {/* You can replace this with an SVG or an image */}
-              </span>
-            </Link>
+      {/* Mission, Vision, Narratives Section within the Main Container */}
+      <div className="mt-20 text-center flex justify-between w-full">
+        
+        {/* Mission Icon and Title */}
+        <div className="text-center">
+          <div className="text-gray-600 text-5xl mb-4">
+            <i className="fas fa-bullseye"></i> {/* Mission Icon */}
           </div>
+          <h3 className="text-xl font-bold text-black">MISSION</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet cursus urna.</p>
+        </div>
+
+        {/* Vision Icon and Title */}
+        <div className="text-center">
+          <div className="text-gray-600 text-5xl mb-4">
+            <i className="fas fa-eye"></i> {/* Vision Icon */}
+          </div>
+          <h3 className="text-xl font-bold text-black">VISION</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet cursus urna.</p>
+        </div>
+
+        {/* Narratives Icon and Title */}
+        <div className="text-center">
+          <div className="text-gray-600 text-5xl mb-4">
+            <i className="fas fa-quote-right"></i> {/* Narratives Icon */}
+          </div>
+          <h3 className="text-xl font-bold text-black">NARRATIVES</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet cursus urna.</p>
         </div>
       </div>
     </div>
@@ -57,5 +97,3 @@ const About = () => {
 };
 
 export default About;
-
-

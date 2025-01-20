@@ -8,20 +8,18 @@ import executive2 from './executive2.svg';
 import executive3 from './executive3.svg';
 import executive4 from './executive4.svg';
 import executive5 from './executive5.svg';
-
-
-
+import completedProject1 from './completed-project1.jpg'; // Fixed extra space here
 
 export const assets = {
-    logo,
-    right_arrow,
-    hero_image,
-    about_us_hero,
-    membership,
-    executive1,
-    executive2,
-    executive3,
-    executive4,
-    executive5,
-
-    };
+  logo,
+  right_arrow,
+  hero_image,
+  about_us_hero,
+  membership,
+  executive1,
+  executive2,
+  executive3,
+  executive4,
+  executive5,
+  completedProject1,  // Adjusted key name to match import
+};

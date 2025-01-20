@@ -1,29 +1,27 @@
-import React from 'react'
-import {assets} from '../assets/assets'
+import React from 'react';
+import { assets } from '../assets/assets'; // Make sure the import path is correct
 
 const Hero = () => {
   return (
     <div>
+      {/* Hero Image Section */}
       <div>
-      <img src={assets.hero_image} alt="" />
-      <div>
-      <h2 
-            className="text-white font-bold flex items-center justify-center border"
-            style={{
-              backgroundColor: '#8d0f1a',
-              borderColor: '#8d0f1a',
-              height: '6rem',
-              fontSize: '2rem', // Adjust font size for 50% height
-              fontFamily: 'Big Shoulders Display, ExtraBold' // Set Times New Roman font
-            }}
-          >
-            THE CITIZENS ROAD SAFETY PROGRAMME
-          </h2>
+        <img 
+          src={assets.completedProject1} // Correct the asset reference to match the export key
+          alt="Completed Project"
+          style={{
+            width: '100%', // Ensures the image takes up 100% width
+            height: 'auto', // Maintains the aspect ratio of the image
+            display: 'block', // Removes extra space below the image
+            
+          }} 
+        />
+      </div>
 
-      </div>
-      </div>
+      {/* Hero Text Section */}
+      {/* You can add any text or content you need here */}
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

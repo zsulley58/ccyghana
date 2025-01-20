@@ -22,7 +22,7 @@ const Navbar = () => {
   </NavLink>
   <div className="h-6 w-px bg-gray-300"></div> {/* Vertical Line */}
 
-  <NavLink to="/about" className="flex flex-col items-center gap-1">
+  <NavLink to="/about-us" className="flex flex-col items-center gap-1">
     <p>ABOUT US</p>
     <hr className="w-2/4 border-none h-[1.5px] bg-red-700 hidden" />
   </NavLink>
