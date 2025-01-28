@@ -1,36 +1,29 @@
 import React from "react";
-import ongoing1 from "../assets/on-going-project1.jpg";
-import ongoing2 from "../assets/on-going-project2.jpg";
-import ongoing3 from "../assets/on-going-project3.jpg";
-import completed1 from "../assets/completed-project1.jpg";
-import completed2 from "../assets/completed-project2.jpg";
-import completed3 from "../assets/completed-project3.jpg";
 
 const Projects = () => {
-  // News Section Content
+  // News Section Content with Stock Images
   const newsItems = [
     {
-      image: ongoing3,
+      image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
-      image: completed1,
+      image: "https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=600",
       text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
-      image: completed2,
+      image: "https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=600",
       text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
     },
     {
-      image: completed3,
+      image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=600",
       text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
     },
   ];
 
   return (
-    <div className="bg-[#00335b] py-12">
+    <div className="bg-[#00335b] py-12 mt-16"> {/* Added mt-16 for margin-top */}
       <div className="max-w-7xl mx-auto px-6">
-        
         {/* Header */}
         <div className="mb-6">
           <h2 className="text-4xl font-extrabold text-white mb-6 font-big-shoulders">
@@ -39,7 +32,7 @@ const Projects = () => {
         </div>
 
         {/* News Items Section in One Line */}
-        <div className="flex justify-start gap-6 items-center">
+        <div className="flex justify-start gap-6 items-center overflow-x-auto mt-8">
           {newsItems.map((item, index) => (
             <div className="flex items-center" key={index}>
               <img

@@ -9,15 +9,12 @@ import Membership from './pages/Membership';
 import ContactUs from './pages/ContactUs';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './components/About';
-import Comp from './components/Comp';
-import Members from './components/Members';
-import Register from './components/Register';  // Import Register component
-import Projects from './components/Projects';  // Import Projects component
+import Box from './components/Box';
+import Projects from './components/Projects'; // Import the Projects component
 
 const App = () => {
   return (
-    <div className='px-4 sm:px-[5vw] md:px[7vw] lg:px-[9vw]'>
+    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -29,11 +26,8 @@ const App = () => {
         <Route path='/contact-us' element={<ContactUs />} />
       </Routes>
       <Hero />
-      <About />
-      <Comp />
-      <Members />
-      <Register />  {/* Register component */}
-      <Projects />  {/* Add the Projects component here */}
+      <Box />
+      <Projects /> {/* Added the Projects component here */}
     </div>
   );
 };
