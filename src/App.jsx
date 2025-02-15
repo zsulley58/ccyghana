@@ -11,6 +11,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Box from './components/Box';
 import Projects from './components/Projects'; // Import the Projects component
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -24,10 +25,12 @@ const App = () => {
         <Route path='/event-gallery' element={<EventGallery />} />
         <Route path='/membership' element={<Membership />} />
         <Route path='/contact-us' element={<ContactUs />} />
+        
       </Routes>
       <Hero />
       <Box />
       <Projects /> {/* Added the Projects component here */}
+      <Footer />
     </div>
   );
 };
